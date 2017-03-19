@@ -32,6 +32,11 @@ $(document).ready(function() {
         .toggleClass( "imgactive animated jello" )
     })
 
+    //handle clicking of toggle navbar
+    $('.navbar-toggle').click(function(){
+      $('#navbar').toggleClass('collapse');
+    });
+
     //weather info
     $.get("//ipinfo.io", function(response) {
     var url2 = url + response.city;
