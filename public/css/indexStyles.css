@@ -1,0 +1,54 @@
+body{
+  background-color:gray;
+}
+#main{
+  margin-top:45px;
+}
+hr.about, hr.portfolio, hr.contact{
+    padding: 0;
+    border: none;
+    border-top: solid 3px;
+    text-align: center;
+    max-width: 800px;
+    margin-top:40px;
+    margin-bottom:40px;
+}
+hr.about:after, hr.portfolio:after, hr.contact:after{
+    font-family: FontAwesome;
+    display: inline-block;
+    position: relative;
+    top: -0.8em;
+    font-size: 3em;
+    padding: 0 0.25em;
+    background-color: #eee;
+    color: black;
+}
+hr.about:after{
+  content: "\f2bd";
+}
+hr.portfolio:after{
+  content: "\f1c9";
+}
+hr.contact:after{
+  content: "\f2c2";
+}
+.navbar{
+  background-color:black;
+}
+
+.imgactive{
+  box-shadow: 10px 10px 5px #888888;
+}
+/*weather stuff*/
+#temp:hover{
+  color:blue;
+  text-decoration:none;
+  cursor:pointer;
+}
+.jumbotron{
+  min-height: 450px;
+}
+
+h1{
+  font-family: 'Ewert', cursive;
+}
