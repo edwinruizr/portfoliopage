@@ -26,6 +26,11 @@ $(document).ready(function() {
     $( this ).parent().addClass( "active" );
   });
 
+  //
+  $('.dropdown').click(function(){
+    $(this).toggleClass("open");
+  });
+
   //handle when user hovers over link images
   $( $('a img')).hover( function() {
       $( this )
@@ -36,6 +41,7 @@ $(document).ready(function() {
     $('.navbar-toggle').click(function(){
       $('#navbar').toggleClass('collapse');
     });
+
 
     //weather info
     $.get("//ipinfo.io", function(response) {
