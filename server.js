@@ -1,5 +1,6 @@
 var express = require('express');
 var drawings = require('./routes/drawings');
+var motorcycle = require('./routes/motorcycle');
 var app = express();
 var path = require('path');
 
@@ -9,7 +10,7 @@ app.set('view engine', 'ejs');
 
 app.use('/',express.static(__dirname + '/public'));
 app.use('/drawings', drawings);
-
+app.use('/motorcycle', motorcycle);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
