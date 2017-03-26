@@ -114,3 +114,6 @@ body {
     text-decoration: none;
     cursor: pointer;
 }
+.modal-img{
+  margin: auto;
+}
