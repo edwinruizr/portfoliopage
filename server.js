@@ -5,7 +5,8 @@ var app = express();
 var path = require('path');
 var favicon = require('serve-favicon');
 var mongojs = require("mongojs");
-var db = mongojs(process.env.MONGODB_URI);
+var uri = process.env.MONGODB_URI || 'mongodb://edwinruizr:wtCZKxve5PBMSyFL@ds137370.mlab.com:37370/heroku_sh7xh2tc';
+var db = mongojs(uri,['drawings']);
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
