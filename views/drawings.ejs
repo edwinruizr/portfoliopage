@@ -76,17 +76,17 @@
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
     <div class="container marketing">
-
-      <!-- Three columns of text below the carousel -->
       <div class="row">
-        <div class="col-lg-4">
-          <a class="thumbnail" href="#">
-          <img class="img" src="https://ypegrw-bn1305.files.1drv.com/y3m34lD-jqJFTSKKm2dfh0KlOZeKGghI7KJt6HR9zNNTOhX6cHKFHD5-cQf2xMHxwJ6CypIrDmKdTSYRJeW7Ns_BOQeDjZTCpZnMiw3aMCcztpjwuHRJntTSt31bI5my7eO81FCfkrAZuiNEliFM6jl6AFS3bNA__DQkYJBeFsLSbQ?width=660&height=440&cropmode=none" alt="Generic placeholder image">
-        </a>
-          <h2>Title</h2>
-          <p>Description.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
+      <% for( var i=0 ; i<docs.length; i++) {%>
+          <div class="col-lg-4">
+            <a class="thumbnail" href="#">
+            <img class="img" src=<%= docs[i].url_medium %> alt=<%= docs[i].drawing_alt_text %>>
+          </a>
+            <h2><%= docs[i].drawing_alt_text %></h2>
+            <p>by <%= docs[i].artist_name %></p>
+            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+      <% } %>
       </div><!-- /.row -->
     </div>
 <%- include footer.ejs %>
