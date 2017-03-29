@@ -1,6 +1,11 @@
 $(document).ready(function() {
+  //handle the clicking of the nav links and making the proper "button" as active
+  $( "li > a" ).click(function() {
+    $("li > a").parent().removeClass("active");
+    $( this ).parent().addClass( "active" );
+  });
 
-
+  //
   $('.dropdown').click(function(){
     $(this).toggleClass("open");
   });
@@ -29,6 +34,5 @@ $(document).ready(function() {
       $(".modal").hide();
     });
 //modals end
-
 
   });
