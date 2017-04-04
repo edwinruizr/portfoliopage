@@ -33,6 +33,14 @@ $(document).ready(function() {
     $(".close").click(function(){
       $(".modal").hide();
     });
+
+    $('.modal').on('shown', function () {
+      $('.modal').animate({ scrollTop: 0 }, 'slow');
+    });
+
+    $('#modal').on('shown', function () {
+      $('.modal').animate({ scrollTop: 0 }, 'slow');
+    });
 //modals end
 
   });
