@@ -6,7 +6,6 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   console.log(req.docs);
   res.set({
-  'Content-Type': 'text/plain',
   'Cache-Control': 'max-age:86400000'
 });
   res.render('drawings', { title: 'Drawings', docs: req.docs });
