@@ -36,3 +36,7 @@ gulp.src('src/views/*.ejs')
   .pipe(minifyejs())
   .pipe(gulp.dest('views'));
 });
+
+gulp.task('watch',function(){
+  gulp.watch('src/scripts/*.js',['scripts']);
+});

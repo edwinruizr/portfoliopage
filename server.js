@@ -26,7 +26,7 @@ var exposeDb = function(req, resp, next){
 
   };
 
-app.use('/',express.static(__dirname + '/public'));
+app.use('/',express.static(__dirname + '/public', { maxAge: 86400000 }));
 app.use('/drawings', exposeDb ,drawings);
 app.use('/motorcycle', motorcycle);
 
