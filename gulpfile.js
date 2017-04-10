@@ -5,6 +5,13 @@ var gulp  = require('gulp'),
     gutil = require('gulp-util');
 var uglify = require('gulp-uglify');
 var minifyejs = require('gulp-minify-ejs');
+var htmlmin = require('gulp-htmlmin');
+
+gulp.task('minify', function() {
+  return gulp.src('src/html/*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('public'));
+});
 
 // create a default task and just log a message
 gulp.task('default', function() {
