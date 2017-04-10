@@ -12,6 +12,7 @@
   "author": "Edwin Ruiz",
   "license": "ISC",
   "dependencies": {
+    "compression": "^1.6.2",
     "ejs": "~2.5.2",
     "express": "^4.15.2",
     "mongojs": "^2.4.0",

@@ -1,13 +1,16 @@
 var express = require('express');
+var compression = require('compression');
 var drawings = require('./routes/drawings');
 var motorcycle = require('./routes/motorcycle');
 var app = express();
+app.use(compression());
 var path = require('path');
 var favicon = require('serve-favicon');
 var mongojs = require("mongojs");
 var uri = process.env.MONGODB_URI || 'mongodb://edwinruizr:wtCZKxve5PBMSyFL@ds137370.mlab.com:37370/heroku_sh7xh2tc';
 var db = mongojs(uri,['drawings']);
 // view engine setup
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
