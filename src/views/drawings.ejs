@@ -76,13 +76,13 @@
       <h1 class="text-center">Drawings Page</h1>
       <div class="row">
       <% for( var i=0 ; i<docs.length; i++) {%>
-          <div class="col-lg-4">
-            <button id="l<%=i %>" class="thumbnail">
-            <img class="img" src=<%= docs[i].url_medium %> alt=<%= docs[i].drawing_alt_text %>>
+          <div class="col-sm-4">
+            <button id="l<%=i %>" class="thumbnail center-block">
+            <img class="img center-block" src=<%= docs[i].url_medium %> alt=<%= docs[i].drawing_alt_text %>>
           </button>
-            <h2><%= docs[i].drawing_alt_text %></h2>
-            <p>by <%= docs[i].artist_name %></p>
-            <button id="<%= i %>" class="btn btn-default modal-button" href="#" role="button">View details &raquo;</button>
+            <h2 class="text-center"><%= docs[i].drawing_alt_text %></h2>
+            <p class="text-center">by <%= docs[i].artist_name %></p>
+            <button id="<%= i %>" class="btn btn-default center-block modal-button" href="#" role="button">View details &raquo;</button>
           </div><!-- /.col-lg-4 -->
 
                   <!-- The Modal -->
