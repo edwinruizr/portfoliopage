@@ -6,6 +6,13 @@ var gulp  = require('gulp'),
 var uglify = require('gulp-uglify');
 var minifyejs = require('gulp-minify-ejs');
 var htmlmin = require('gulp-htmlmin');
+var cleanCSS = require('gulp-clean-css');
+
+gulp.task('minify-css', function() {
+  return gulp.src('src/css/*.css')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(gulp.dest('public/css'));
+});
 
 gulp.task('minify', function() {
   return gulp.src('src/html/*.html')
