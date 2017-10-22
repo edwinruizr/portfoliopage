@@ -31,7 +31,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.css">
         <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
         <link href="https://fonts.googleapis.com/css?family=Ewert" rel="stylesheet">
-        <link rel="stylesheet" href="/css/indexStyles.css">
+
         <script async src="https://use.fontawesome.com/0a957f739f.js"></script>
 
 
@@ -140,7 +140,17 @@
     </div>
   </div>
 </div>
-
 <script async src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     </body>
+    <script type="text/javascript">
+    	$(document).ready(function(){
+    			if (document.createStyleSheet){
+    				document.createStyleSheet('indexStyles.css');
+    			}
+    			else {
+    				$("head").append($("<link rel='stylesheet' href='/css/indexStyles.css' type='text/css' media='screen' />"));
+    			}
+
+    	});
+    </script>
 </html>
