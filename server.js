@@ -26,7 +26,11 @@ var exposeDb = function(req, resp, next){
 
   };
 
-app.use('/',express.static(__dirname + '/public', { maxAge: 86400000, setHeaders: function(res, path, stat){ res.set('Cache-Control',public, max-age=31536000)} }));
+app.use('/',express.static(__dirname + '/public', { maxAge: 86400000,
+  setHeaders: function (res, path, stat) {
+    res.setHeader('Cache-Control', 'public, max-age=31557600')
+  }
+  }));
 app.use('/drawings', exposeDb ,drawings);
 app.use('/motorcycle', motorcycle);
 
