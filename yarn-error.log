@@ -1,0 +1,63 @@
+Arguments: 
+  /usr/local/Cellar/node/8.7.0/bin/node /usr/local/Cellar/yarn/1.2.1/libexec/bin/yarn.js global add npm
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Wireshark.app/Contents/MacOS
+
+Yarn version: 
+  1.2.1
+
+Node version: 
+  8.7.0
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "site",
+    "version": "1.0.0",
+    "engines":{
+  	"node": "6.11.1"	
+    }
+    "description": "personal website",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+      "site"
+    ],
+    "author": "Edwin Ruiz",
+    "license": "ISC",
+    "dependencies": {
+      "compression": "^1.6.2",
+      "ejs": "~2.5.2",
+      "express": "^4.15.2",
+      "mongojs": "^2.4.0",
+      "serve-favicon": "^2.4.1"
+    },
+    "devDependencies": {
+      "gulp": "^3.9.1",
+      "gulp-clean-css": "^3.0.4",
+      "gulp-htmlmin": "^3.0.0",
+      "gulp-minify-ejs": "^1.0.3",
+      "gulp-uglify": "^2.1.2",
+      "gulp-util": "^3.0.8"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  SyntaxError: /Users/edwin/Desktop/personal-site-edwinruizr/package.json: Unexpected string in JSON at position 81
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.2.1/libexec/lib/cli.js:770:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.2.1/libexec/lib/cli.js:92:30)
+      at /usr/local/Cellar/yarn/1.2.1/libexec/lib/cli.js:103:13
+      at <anonymous>
